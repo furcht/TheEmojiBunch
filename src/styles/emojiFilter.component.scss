@@ -1,0 +1,37 @@
+.c-emojiFilter {
+    display: grid;
+    gap: 0.25rem;
+    margin-bottom: 1.25em;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms;
+
+    &__ {
+        &category {
+            text-align: left;
+            line-height: 2.25rem;
+            background-color: #111;
+            border-radius: 0.375em;
+            transition: background-color 500ms;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+
+            span { flex-grow: 1; }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #222;
+                a { text-decoration: underline; }
+            }
+        }
+    }
+    
+    .c-menuBar--mobile & { max-height: 50vh; }
+
+    @media screen and (min-width: 65em) {
+        max-height: none;
+        grid-template-columns: none;
+    }
+}

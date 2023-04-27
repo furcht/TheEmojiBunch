@@ -1,0 +1,22 @@
+.e-selector {
+    background: hsl(0, 80%, 34%);
+    width: 1.75rem;
+    height: 1.75rem;
+    transition: background-color 500ms;
+    border-radius: 0.375rem;
+    background-image: url("/icon-inactive.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    
+    &-- {
+        &active {
+            background-color: hsl(87, 87%, 33%);
+            background-image: url("/icon-active.svg");
+        }
+        &partial {
+            background-color: hsl(42, 65%, 48%);
+            background-image: url("/icon-partial.svg");
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.c-viewPort {
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "body";
+    &__ {
+        &menu {
+            background-color: #000;
+            max-height: 100vh;
+            position: sticky;
+            top: 0;
+            left: 0;
+            font-size: 0.825em;
+            text-align: center;
+            overflow-y: auto;
+            grid-area: menu;
+            z-index: 2;
+        }
+        &body {
+            grid-area: body;
+            z-index: 1;
+        }
+    }
+
+    @media screen and (min-width: 65em) {
+        grid-template-columns: 13em 1fr;
+        grid-template-areas: "menu body";
+    }
+}

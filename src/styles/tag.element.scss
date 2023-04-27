@@ -1,0 +1,23 @@
+.e-tag {
+    font-size: 1.125rem;
+    background-color: #333;
+    color: #fff;
+    animation: fade-out 1100ms;
+    padding: 0.25rem 0.75em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.25rem;
+}
+
+@keyframes fade-out {
+    from {
+        top: 50%;
+        opacity: 1;
+    }
+    to {
+        top: 10%;
+        opacity: 0;
+    }
+}
