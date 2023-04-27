@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import '@/styles/reset.scss';
 import '@/styles/global.scss';
 import '@/styles/font.scss';
@@ -12,5 +13,10 @@ import '@/styles/viewPort.component.scss';
 import '@/styles/menuBar.component.scss';
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  )
 }
