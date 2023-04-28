@@ -146,7 +146,7 @@ export default function Home() {
   }
   
   return (
-    <div className="c-viewPort">
+    <main className="c-viewPort">
       <div id="viewMenu" className="c-viewPort__menu">
         <MenuBar
           categories={baseState.emojis}
@@ -163,6 +163,6 @@ export default function Home() {
           dispatcher={dispatchState}
         />
       </div>
-    </div>
+    </main>
   )
 }
